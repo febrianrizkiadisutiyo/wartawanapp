@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register"
+    android:padding="50dp">
+
+    <EditText
+        android:id="@+id/etid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:drawableStart="@drawable/ic_person"
+        android:drawablePadding="24dp"
+        android:hint="Id Wartawan"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/etpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etid"
+        android:layout_marginTop="25dp"
+        android:drawableStart="@drawable/ic_password"
+        android:drawablePadding="24dp"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <ImageButton
+        android:id="@+id/btnlogin"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/etpassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btnlogin"
+        android:onClick="login" />
+
+    <TextView
+        android:id="@+id/tvor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnlogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Or"
+        android:textColor="@color/cardview_dark_background" />
+
+    <TextView
+        android:id="@+id/tvregister"
+        android:layout_below="@+id/tvor"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:onClick="register"
+        android:text="Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+</RelativeLayout>

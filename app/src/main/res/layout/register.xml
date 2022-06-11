@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:padding="35dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+            android:layout_marginLeft="130dp"/>
+
+        <EditText
+            android:id="@+id/etid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="24dp"
+            android:hint="Id Wartawan" />
+
+        <EditText
+            android:id="@+id/etpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etid"
+            android:layout_marginTop="25dp"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="24dp"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/etnama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etpassword"
+            android:layout_marginTop="25dp"
+            android:drawableStart="@drawable/ic_baseline_drive_file_rename_outline_24"
+            android:drawablePadding="24dp"
+            android:hint="Nama Lengkap"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etnama"
+            android:layout_marginTop="25dp"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawablePadding="24dp"
+            android:hint="email"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etnohp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etemail"
+            android:layout_marginTop="25dp"
+            android:drawableStart="@drawable/ic_baseline_local_phone_24"
+            android:drawablePadding="24dp"
+            android:hint="No Hp"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etjkelamin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etnohp"
+            android:layout_marginTop="25dp"
+            android:drawableStart="@drawable/ic_baseline_drive_file_rename_outline_24"
+            android:drawablePadding="24dp"
+            android:hint="Jenis Kelamin"
+            android:inputType="text" />
+
+        <ImageButton
+            android:id="@+id/btnregister"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/etjkelamin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/btnregister"
+            />
+
+    </RelativeLayout>
+
+
+</ScrollView>
