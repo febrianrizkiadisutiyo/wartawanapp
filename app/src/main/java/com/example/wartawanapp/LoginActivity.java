@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.wartawanapp.api.ApiClient;
 import com.example.wartawanapp.api.ApiInterface;
 import com.example.wartawanapp.model.login.Login;
+import com.example.wartawanapp.model.login.LoginData;
 import com.google.android.material.textfield.TextInputEditText;
 
 import retrofit2.Call;
@@ -26,6 +27,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     TextView tvregister;
     String idWartawan, Password;
     ApiInterface apiInterface;
+    SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,9 +69,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onResponse(Call<Login> call, Response<Login> response) {
                 if(response.body() != null && response.isSuccessful() && response.body().isStatus()){
+
+                    sessionManager = new SessionManager(LoginActivity.this);
+                    LoginData loginData = response.body().getData();
+                    sessionManager.createLoginSession(loginData);
+
                     Toast.makeText(LoginActivity.this, response.body().getData().getNamaLengkap(), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                     startActivity(intent);
+                    finish();
                 } else {
                     Toast.makeText(LoginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
                 }

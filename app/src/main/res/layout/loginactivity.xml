@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/register"
+    android:background="@drawable/animation3"
     android:padding="50dp">
 
     <EditText
         android:id="@+id/etid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="300dp"
         android:drawableStart="@drawable/ic_person"
         android:drawablePadding="24dp"
         android:hint="Id Wartawan"
-        android:inputType="number"/>
+        android:inputType="number"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/etpassword"
@@ -24,7 +26,8 @@
         android:drawableStart="@drawable/ic_password"
         android:drawablePadding="24dp"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <ImageButton
         android:id="@+id/btnlogin"
@@ -34,7 +37,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:background="@drawable/btnlogin"
-        android:onClick="login" />
+        android:onClick="login"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/tvor"
@@ -48,14 +52,15 @@
 
     <TextView
         android:id="@+id/tvregister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/tvor"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/black"
         android:layout_marginTop="10dp"
         android:onClick="register"
         android:text="Register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:textColor="@color/black"
+        tools:ignore="TouchTargetSizeCheck" />
 
 
 
