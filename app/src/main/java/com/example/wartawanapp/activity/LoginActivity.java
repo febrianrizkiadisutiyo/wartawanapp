@@ -1,4 +1,4 @@
-package com.example.wartawanapp;
+package com.example.wartawanapp.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,11 +10,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.wartawanapp.R;
 import com.example.wartawanapp.api.ApiClient;
 import com.example.wartawanapp.api.ApiInterface;
 import com.example.wartawanapp.model.login.Login;
 import com.example.wartawanapp.model.login.LoginData;
-import com.google.android.material.textfield.TextInputEditText;
 
 import retrofit2.Call;
 import retrofit2.Callback;

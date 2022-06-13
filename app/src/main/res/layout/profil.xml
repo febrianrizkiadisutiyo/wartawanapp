@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvnama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="215dp"
+        android:text="Nama : "
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/etnama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toRightOf="@+id/tvjkelamin"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tvid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvnama"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="Id Wartawan : "
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/etid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etnama"
+        android:layout_marginEnd="20dp"
+        android:layout_toRightOf="@+id/tvjkelamin"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvid"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="Email : "
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etid"
+        android:layout_marginEnd="20dp"
+        android:layout_toRightOf="@+id/tvjkelamin"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvnohp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvemail"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="No.Hp : "
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/etnohp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etemail"
+        android:layout_marginEnd="20dp"
+        android:layout_toRightOf="@+id/tvjkelamin"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvjkelamin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvnohp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="23dp"
+        android:text="Jenis Kelamin : "
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/etjk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etnohp"
+        android:layout_marginEnd="20dp"
+        android:layout_toRightOf="@+id/tvjkelamin"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+
+</RelativeLayout>

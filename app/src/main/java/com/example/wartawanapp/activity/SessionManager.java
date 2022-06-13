@@ -1,4 +1,4 @@
-package com.example.wartawanapp;
+package com.example.wartawanapp.activity;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -13,8 +13,8 @@ public class SessionManager {
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
 
+
     public static final String IS_LOGGED_IN ="isLoggedIn";
-//    private static final String no ="no";
     public static final String id_wartawan ="id_wartawan";
     public static final String nama_lengkap ="nama_lengkap";
     public static final String email ="email";
@@ -42,7 +42,7 @@ public class SessionManager {
         user.put(nama_lengkap,sharedPreferences.getString(nama_lengkap,null));
         user.put(email, sharedPreferences.getString(email,null));
         user.put(no_hp, sharedPreferences.getString(no_hp,null));
-        user.put(no_hp, sharedPreferences.getString(no_hp,null));
+        user.put(jenis_kelamin, sharedPreferences.getString(jenis_kelamin,null));
         return user;
     }
     public void logoutSession(){

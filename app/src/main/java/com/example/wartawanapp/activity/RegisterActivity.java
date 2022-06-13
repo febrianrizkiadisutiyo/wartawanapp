@@ -1,4 +1,4 @@
-package com.example.wartawanapp;
+package com.example.wartawanapp.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.wartawanapp.R;
 import com.example.wartawanapp.api.ApiClient;
 import com.example.wartawanapp.api.ApiInterface;
 import com.example.wartawanapp.model.register.Register;

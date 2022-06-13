@@ -1,4 +1,4 @@
-package com.example.wartawanapp;
+package com.example.wartawanapp.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,10 +7,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.wartawanapp.R;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView etid,etnama;
+    Button btnpindah;
     SessionManager sessionManager;
     String id_wartawan, nama_lengkap;
 
@@ -25,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
         }
         etid = findViewById(R.id.etid);
         etnama = findViewById(R.id.etnama);
+
+        btnpindah = findViewById(R.id.btnpindah);
+        btnpindah.setOnClickListener(this);
 
         id_wartawan = sessionManager.getUserDetail().get(SessionManager.id_wartawan);
         nama_lengkap = sessionManager.getUserDetail().get(SessionManager.nama_lengkap);
@@ -55,5 +63,13 @@ public class MainActivity extends AppCompatActivity {
                 moveToLogin();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(this,ProfilActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
