@@ -13,14 +13,15 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/logo"
-            android:layout_marginLeft="130dp"/>
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="130dp"
+            android:src="@drawable/logo" />
 
         <EditText
             android:id="@+id/etid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="110dp"
             android:drawableStart="@drawable/ic_person"
             android:drawablePadding="24dp"
             android:hint="Id Wartawan"
@@ -92,9 +93,23 @@
             android:layout_height="40dp"
             android:layout_below="@+id/etjkelamin"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/btnregister"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <EditText
+            android:id="@+id/etnote"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/btnregister"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="47dp"
+            android:drawableStart="@drawable/logo"
+            android:hint="Build and design with love by Frimd News"
+            android:inputType="text"
+            android:textColorHint="@color/black"
+            android:textSize="10dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
     </RelativeLayout>
 

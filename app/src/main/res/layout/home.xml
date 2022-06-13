@@ -1,7 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/berita"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivtoday"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/today" />
+
+        <ImageView
+            android:id="@+id/ivlogo"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="280dp"
+            android:src="@drawable/logo" />
+
+        <ImageView
+            android:id="@+id/ivberita"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_below="@id/ivtoday"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="-24dp"
+            android:src="@drawable/gambar" />
+
+        <ImageView
+            android:id="@+id/ivtranding"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/ivberita"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/tranding" />
+
+        <ImageView
+            android:id="@+id/ivberita1"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/ivtranding"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/berita1" />
+
+        <ImageView
+            android:id="@+id/ivberita2"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/ivberita1"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/berita2" />
+
+        <ImageView
+            android:id="@+id/ivberita3"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/ivberita2"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/berita3" />
+
+        <ImageView
+            android:id="@+id/ivadd"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/ivberita2"
+            android:layout_marginLeft="350dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/tambah" />
+
+    </RelativeLayout>
+</ScrollView>

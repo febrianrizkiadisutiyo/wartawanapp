@@ -15,7 +15,7 @@ import com.example.wartawanapp.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView etid,etnama;
-    Button btnpindah;
+    Button btnpindah, btnuploadberita;
     SessionManager sessionManager;
     String id_wartawan, nama_lengkap;
 
@@ -33,6 +33,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnpindah = findViewById(R.id.btnpindah);
         btnpindah.setOnClickListener(this);
+
+        btnuploadberita = findViewById(R.id.btnuploadberita);
+
 
         id_wartawan = sessionManager.getUserDetail().get(SessionManager.id_wartawan);
         nama_lengkap = sessionManager.getUserDetail().get(SessionManager.nama_lengkap);
@@ -61,6 +64,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.actionlogout:
                 sessionManager.logoutSession();
                 moveToLogin();
+
+
         }
         return super.onOptionsItemSelected(item);
     }
@@ -70,6 +75,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         Intent intent = new Intent(this,ProfilActivity.class);
         startActivity(intent);
+    }
+
+
+    public void pindah(View view) {
+        Intent intent1 = new Intent(this,InputBeritaActivity.class);
+        startActivity(intent1);
         finish();
     }
 }

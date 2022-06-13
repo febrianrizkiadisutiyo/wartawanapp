@@ -35,10 +35,18 @@
 
         <Button
             android:id="@+id/btnpindah"
-            android:layout_below="@+id/etnama"
-            android:text="pindah"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etnama"
+            android:text="pindah" />
+
+        <Button
+            android:id="@+id/btnuploadberita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnpindah"
+            android:onClick="pindah"
+            android:text="pindah ke upload image" />
 
     </RelativeLayout>
 
