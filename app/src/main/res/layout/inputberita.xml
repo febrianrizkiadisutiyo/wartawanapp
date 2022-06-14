@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background">
 
     <RelativeLayout
+        android:padding="25dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="25dp">
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/image"
             android:layout_width="200dp"
             android:layout_height="120dp"
             android:layout_marginLeft="80dp"
-            android:background="#95272727"
+            android:background="@drawable/custom"
             android:src="@drawable/ic_image" />
 
         <TextView
@@ -23,95 +22,100 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/image"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
             android:text="Judul"
             android:textSize="20dp"
-            android:textStyle="bold" />
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/etjudul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvjudul"
-            android:inputType="text"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            android:background="@drawable/custom"
+            android:minHeight="48dp"
+            android:inputType="text" />
 
         <TextView
             android:id="@+id/tvtanggal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/etjudul"
-            android:layout_marginLeft="5dp"
             android:layout_marginTop="15dp"
             android:text="Tanggal"
             android:textSize="20dp"
-            android:textStyle="bold" />
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/ettanggal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvtanggal"
-            android:inputType="text"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            android:background="@drawable/custom"
+            android:minHeight="48dp"
+            android:inputType="text"/>
 
         <TextView
             android:id="@+id/tvtkp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/ettanggal"
-            android:layout_marginLeft="5dp"
             android:layout_marginTop="15dp"
             android:text="Tempat Kejadian"
             android:textSize="20dp"
-            android:textStyle="bold" />
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/ettkp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvtkp"
-            android:inputType="text"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            android:background="@drawable/custom"
+            android:minHeight="48dp"
+            android:inputType="text"/>
 
         <TextView
             android:id="@+id/tvtags"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/ettkp"
-            android:layout_marginLeft="5dp"
             android:layout_marginTop="15dp"
             android:text="Tags"
             android:textSize="20dp"
-            android:textStyle="bold" />
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/ettags"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvtags"
-            android:inputType="text"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+            android:background="@drawable/custom"
+            android:minHeight="48dp"
+            android:inputType="text"/>
 
         <TextView
             android:id="@+id/tvdescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/ettags"
-            android:layout_marginLeft="5dp"
             android:layout_marginTop="15dp"
             android:text="Description"
             android:textSize="20dp"
-            android:textStyle="bold" />
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/etdeskripsi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/custom"
+            android:minHeight="48dp"
             android:layout_below="@id/tvdescription"
-            android:drawablePadding="24dp"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            android:drawablePadding="24dp" />
 
         <ImageButton
             android:id="@+id/btnpublish"
@@ -120,9 +124,8 @@
             android:layout_below="@+id/etdeskripsi"
             android:layout_marginLeft="250dp"
             android:layout_marginTop="30dp"
-            android:layout_marginBottom="100dp"
             android:background="@drawable/btnpublish"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            android:onClick="login" />
 
         <ImageButton
             android:id="@+id/btndraft"
@@ -132,8 +135,6 @@
             android:layout_marginLeft="120dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/btndraft"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-
+            android:onClick="login" />
     </RelativeLayout>
 </ScrollView>
