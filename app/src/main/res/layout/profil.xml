@@ -3,17 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@drawable/background"
-
+    android:padding="15dp"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/logo" />
+
     <TextView
-        android:id="@+id/tvnama"
+        android:id="@+id/tvname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="215dp"
-        android:text="Nama : "
-        android:textSize="20dp" />
+        android:layout_marginTop="205dp"
+        android:text="Nama"
+        android:textStyle="bold"
+        android:textSize="23dp" />
 
     <EditText
         android:id="@+id/etnama"
@@ -22,18 +30,20 @@
         android:layout_marginTop="200dp"
         android:layout_marginEnd="20dp"
         android:layout_toRightOf="@+id/tvjkelamin"
+        android:background="@drawable/custom"
         android:minHeight="48dp"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/tvid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvnama"
+        android:layout_below="@+id/tvname"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
-        android:text="Id Wartawan : "
-        android:textSize="20dp" />
+        android:layout_marginTop="30dp"
+        android:text="Id Wartawan"
+        android:textSize="23dp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/etid"
@@ -41,6 +51,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/etnama"
         android:layout_marginEnd="20dp"
+        android:minHeight="48dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/custom"
         android:layout_toRightOf="@+id/tvjkelamin"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
@@ -50,15 +63,19 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvid"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
-        android:text="Email : "
-        android:textSize="20dp" />
+        android:textStyle="bold"
+        android:layout_marginTop="35dp"
+        android:text="Email"
+        android:textSize="23dp" />
 
     <EditText
         android:id="@+id/etemail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/etid"
+        android:background="@drawable/custom"
+        android:layout_marginTop="15dp"
+        android:minHeight="48dp"
         android:layout_marginEnd="20dp"
         android:layout_toRightOf="@+id/tvjkelamin"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
@@ -69,14 +86,18 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvemail"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
-        android:text="No.Hp : "
-        android:textSize="20dp" />
+        android:layout_marginTop="35dp"
+        android:text="No Hp"
+        android:textStyle="bold"
+        android:textSize="23dp" />
 
     <EditText
         android:id="@+id/etnohp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/custom"
+        android:minHeight="48dp"
+        android:layout_marginTop="15dp"
         android:layout_below="@+id/etemail"
         android:layout_marginEnd="20dp"
         android:layout_toRightOf="@+id/tvjkelamin"
@@ -88,19 +109,21 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvnohp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="23dp"
-        android:text="Jenis Kelamin : "
-        android:textSize="20dp" />
+        android:layout_marginTop="35dp"
+        android:text="Jenis Kelamin"
+        android:textSize="23dp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/etjk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/etnohp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
         android:layout_toRightOf="@+id/tvjkelamin"
+        android:background="@drawable/custom"
+        android:minHeight="48dp"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-
 
 </RelativeLayout>
