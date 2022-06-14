@@ -83,7 +83,9 @@ public class InputBeritaActivity extends AppCompatActivity {
         btndraft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(InputBeritaActivity.this, "testes", Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(InputBeritaActivity.this,TampilanBerita.class);
+//                startActivity(intent);
+//                finish();
             }
         });
 

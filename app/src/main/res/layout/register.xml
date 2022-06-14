@@ -23,6 +23,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="110dp"
             android:drawableStart="@drawable/ic_person"
+            android:background="@drawable/custom"
+            android:padding="13dp"
             android:drawablePadding="24dp"
             android:hint="Id Wartawan"
             tools:ignore="TouchTargetSizeCheck" />
@@ -35,6 +37,8 @@
             android:layout_marginTop="25dp"
             android:drawableStart="@drawable/ic_password"
             android:drawablePadding="24dp"
+            android:background="@drawable/custom"
+            android:padding="13dp"
             android:hint="Password"
             android:inputType="textPassword"
             tools:ignore="TouchTargetSizeCheck" />
@@ -47,6 +51,8 @@
             android:layout_marginTop="25dp"
             android:drawableStart="@drawable/ic_baseline_drive_file_rename_outline_24"
             android:drawablePadding="24dp"
+            android:background="@drawable/custom"
+            android:padding="13dp"
             android:hint="Nama Lengkap"
             android:inputType="text"
             tools:ignore="TouchTargetSizeCheck" />
@@ -60,6 +66,8 @@
             android:drawableStart="@drawable/ic_baseline_email_24"
             android:drawablePadding="24dp"
             android:hint="email"
+            android:background="@drawable/custom"
+            android:padding="13dp"
             android:inputType="text"
             tools:ignore="TouchTargetSizeCheck" />
 
@@ -72,6 +80,8 @@
             android:drawableStart="@drawable/ic_baseline_local_phone_24"
             android:drawablePadding="24dp"
             android:hint="No Hp"
+            android:background="@drawable/custom"
+            android:padding="13dp"
             android:inputType="text"
             tools:ignore="TouchTargetSizeCheck" />
 
@@ -84,6 +94,8 @@
             android:drawableStart="@drawable/ic_baseline_drive_file_rename_outline_24"
             android:drawablePadding="24dp"
             android:hint="Jenis Kelamin"
+            android:background="@drawable/custom"
+            android:padding="13dp"
             android:inputType="text"
             tools:ignore="TouchTargetSizeCheck" />
 

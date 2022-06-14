@@ -3,6 +3,7 @@ package com.example.wartawanapp.api;
 import com.example.wartawanapp.model.inputberita.InputBerita;
 import com.example.wartawanapp.model.login.Login;
 import com.example.wartawanapp.model.register.Register;
+import com.example.wartawanapp.model.tampilanberita.TampilanData;
 
 import okhttp3.MultipartBody;
 import okhttp3.Request;
@@ -10,6 +11,7 @@ import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
@@ -43,6 +45,8 @@ public interface ApiInterface {
             @Part("deskripsi")RequestBody deskripsi
 
     );
+    @GET("retrieve.php")
+    Call<TampilanData> TampilanResponse();
 
 
 }
