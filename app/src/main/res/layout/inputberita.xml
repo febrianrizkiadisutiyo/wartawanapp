@@ -134,11 +134,6 @@
             android:background="@drawable/btndraft"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
-        <Button
-            android:id="@+id/btntest"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btndraft"
-            tools:ignore="SpeakableTextPresentCheck" />
+
     </RelativeLayout>
 </ScrollView>

@@ -47,8 +47,6 @@ public class InputBeritaActivity extends AppCompatActivity {
     TextView logout;
     String path;
 
-    Button btntest;
-
     ApiInterface apiInterface;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,16 +62,24 @@ public class InputBeritaActivity extends AppCompatActivity {
         etdeskripsi = findViewById(R.id.etdeskripsi);
         btnpublish = findViewById(R.id.btnpublish);
         btndraft = findViewById(R.id.btndraft);
-        btntest = findViewById(R.id.btntest);
-        btntest.setOnClickListener(new View.OnClickListener() {
+
+        btnpublish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 publish();
                 Toast.makeText(InputBeritaActivity.this, "this ", Toast.LENGTH_SHORT).show();
-//                Intent intent = new Intent(InputBeritaActivity.this,ProfilActivity.class);
-//                startActivity(intent);
             }
         });
+//        btntest = findViewById(R.id.btntest);
+//        btntest.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                publish();
+//                Toast.makeText(InputBeritaActivity.this, "this ", Toast.LENGTH_SHORT).show();
+////                Intent intent = new Intent(InputBeritaActivity.this,ProfilActivity.class);
+////                startActivity(intent);
+//            }
+//        });
         btndraft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -8,19 +8,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:id="@+id/idberita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Id Berita"
+            android:visibility="gone"/>
+
         <ImageView
             android:id="@+id/ivgambarberita"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="@color/black" />
+
         <TextView
             android:id="@+id/tvjudul"
-            android:text="Judul"
-            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_toRightOf="@+id/ivgambarberita"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:text="Judul"
+            android:textSize="20dp" />
         <TextView
             android:layout_toRightOf="@+id/ivgambarberita"
             android:layout_marginStart="20dp"

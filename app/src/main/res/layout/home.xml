@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background">
@@ -12,10 +13,11 @@
             android:id="@+id/profil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="profil"
             android:layout_marginStart="20dp"
             android:layout_marginTop="19dp"
-            android:drawableStart="@drawable/ic_baseline_person_24" />
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:onClick="profil"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <ImageView
             android:id="@+id/ivtoday"

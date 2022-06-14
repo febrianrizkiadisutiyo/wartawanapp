@@ -54,7 +54,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btnpindah"
-            android:onClick="pindah"
             android:text="pindah ke upload image" />
 
     </RelativeLayout>
