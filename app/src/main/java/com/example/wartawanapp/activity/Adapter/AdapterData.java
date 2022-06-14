@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,7 +20,12 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
     private Context ctx;
     private List<DataBerita> ListBerita;
 
-    public AdapterData(TampilanBerita tampilanBerita, List<DataBerita> listData) {
+//    public AdapterData(TampilanBerita tampilanBerita, List<DataBerita> listBerita) {
+//        this.ctx = tampilanBerita;
+//    }
+    public AdapterData(Context context, List<DataBerita> listBerita){
+        this.ctx = context;
+        this.ListBerita = listBerita;
     }
 
     @NonNull
@@ -49,6 +55,7 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
     public  class HolderData extends RecyclerView.ViewHolder {
 
         TextView idberita, tvjudul, tvtags, tvdeskripsi;
+        ImageView ivgambarberita;
 
         public HolderData(@NonNull View itemView) {
             super(itemView);
@@ -57,6 +64,7 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
             tvjudul = itemView.findViewById(R.id.tvjudul);
             tvtags = itemView.findViewById(R.id.tvtags);
             tvdeskripsi = itemView.findViewById(R.id.tvdeskripsi);
+            ivgambarberita = itemView.findViewById(R.id.ivgambarberita);
         }
     }
 

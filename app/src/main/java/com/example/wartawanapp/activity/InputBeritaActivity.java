@@ -83,9 +83,9 @@ public class InputBeritaActivity extends AppCompatActivity {
         btndraft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(InputBeritaActivity.this,TampilanBerita.class);
-//                startActivity(intent);
-//                finish();
+                Intent intent = new Intent(InputBeritaActivity.this,TampilanBerita.class);
+                startActivity(intent);
+                finish();
             }
         });
 
