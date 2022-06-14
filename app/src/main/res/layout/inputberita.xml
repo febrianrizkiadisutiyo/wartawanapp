@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background">
@@ -33,7 +34,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvjudul"
-            android:inputType="text" />
+            android:inputType="text"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/tvtanggal"
@@ -51,7 +53,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvtanggal"
-            android:inputType="text" />
+            android:inputType="text"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/tvtkp"
@@ -69,7 +72,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvtkp"
-            android:inputType="text" />
+            android:inputType="text"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/tvtags"
@@ -87,7 +91,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvtags"
-            android:inputType="text" />
+            android:inputType="text"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/tvdescription"
@@ -105,17 +110,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvdescription"
-            android:drawablePadding="24dp" />
+            android:drawablePadding="24dp"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/btnpublish"
             android:layout_width="100dp"
-            android:layout_marginBottom="100dp"
             android:layout_height="35dp"
             android:layout_below="@+id/etdeskripsi"
             android:layout_marginLeft="250dp"
             android:layout_marginTop="30dp"
-            android:background="@drawable/btnpublish" />
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/btnpublish"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/btndraft"
@@ -124,12 +131,14 @@
             android:layout_below="@+id/etdeskripsi"
             android:layout_marginLeft="120dp"
             android:layout_marginTop="30dp"
-            android:background="@drawable/btndraft" />
+            android:background="@drawable/btndraft"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         <Button
             android:id="@+id/btntest"
-            android:layout_below="@+id/btndraft"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btndraft"
+            tools:ignore="SpeakableTextPresentCheck" />
     </RelativeLayout>
 </ScrollView>
