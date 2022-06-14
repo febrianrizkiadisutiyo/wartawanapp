@@ -2,7 +2,7 @@ package com.example.wartawanapp.model.inputberita;
 
 import com.google.gson.annotations.SerializedName;
 
-public class InputBeritaData {
+public class Data{
 
 	@SerializedName("tkp")
 	private String tkp;

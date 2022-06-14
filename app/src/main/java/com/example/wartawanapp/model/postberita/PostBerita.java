@@ -1,14 +1,12 @@
-package com.example.wartawanapp.model.inputberita;
+package com.example.wartawanapp.model.postberita;
 
+import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
-public class InputBerita{
-
-	@SerializedName("path")
-	private String path;
+public class PostBerita{
 
 	@SerializedName("data")
-	private Data data;
+	private List<DataItem> data;
 
 	@SerializedName("message")
 	private String message;
@@ -16,19 +14,11 @@ public class InputBerita{
 	@SerializedName("status")
 	private String status;
 
-	public void setPath(String path){
-		this.path = path;
-	}
-
-	public String getPath(){
-		return path;
-	}
-
-	public void setData(Data data){
+	public void setData(List<DataItem> data){
 		this.data = data;
 	}
 
-	public Data getData(){
+	public List<DataItem> getData(){
 		return data;
 	}
 

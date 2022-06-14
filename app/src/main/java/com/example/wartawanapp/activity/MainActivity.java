@@ -9,39 +9,56 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.wartawanapp.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    TextView etid,etnama;
-    Button btnpindah, btnuploadberita;
-    SessionManager sessionManager;
-    String id_wartawan, nama_lengkap;
+//    TextView etid,etnama, logout;
+//    Button btnpindah, btnuploadberita;
+//
+//    String id_wartawan, nama_lengkap;
+
+        TextView profil, logout;
+        ImageView ivadd;
+        SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.home);
 
         sessionManager = new SessionManager(MainActivity.this);
         if(!sessionManager.isLoggedIn()) {
             moveToLogin();
         }
-        etid = findViewById(R.id.etid);
-        etnama = findViewById(R.id.etnama);
 
-        btnpindah = findViewById(R.id.btnpindah);
-        btnpindah.setOnClickListener(this);
+        profil = findViewById(R.id.profil);
+        logout = findViewById(R.id.logout);
+        ivadd = findViewById(R.id.ivadd);
 
-        btnuploadberita = findViewById(R.id.btnuploadberita);
+        logout.setOnClickListener(this);
 
 
-        id_wartawan = sessionManager.getUserDetail().get(SessionManager.id_wartawan);
-        nama_lengkap = sessionManager.getUserDetail().get(SessionManager.nama_lengkap);
-
-        etid.setText(id_wartawan);
-        etnama.setText(nama_lengkap);
+//        etid = findViewById(R.id.etid);
+//        etnama = findViewById(R.id.etnama);
+//        logout = findViewById(R.id.logout);
+//
+//        btnpindah = findViewById(R.id.btnpindah);
+//        btnpindah.setOnClickListener(this);
+//
+//        logout.setOnClickListener(this);
+//
+//        btnuploadberita = findViewById(R.id.btnuploadberita);
+//
+//
+//        id_wartawan = sessionManager.getUserDetail().get(SessionManager.id_wartawan);
+//        nama_lengkap = sessionManager.getUserDetail().get(SessionManager.nama_lengkap);
+//
+//        etid.setText(id_wartawan);
+//        etnama.setText(nama_lengkap);
 
     }
 
@@ -53,34 +70,55 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.actionlogout:
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.logout:
                 sessionManager.logoutSession();
                 moveToLogin();
-
-
         }
-        return super.onOptionsItemSelected(item);
     }
 
-
-    @Override
-    public void onClick(View view) {
+    public void profil(View view) {
         Intent intent = new Intent(this,ProfilActivity.class);
         startActivity(intent);
-    }
-
-
-    public void pindah(View view) {
-        Intent intent1 = new Intent(this,InputBeritaActivity.class);
-        startActivity(intent1);
         finish();
     }
+
+    public void inputberita(View view) {
+        Intent intent = new Intent(this,InputBeritaActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.menu, menu);
+//        return super.onCreateOptionsMenu(menu);
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        switch (item.getItemId()){
+//            case R.id.logout:
+//                sessionManager.logoutSession();
+//                moveToLogin();
+//
+//
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
+//
+//
+//    @Override
+//    public void onClick(View view) {
+//        Intent intent = new Intent(this,ProfilActivity.class);
+//        startActivity(intent);
+//    }
+//
+//
+//    public void pindah(View view) {
+//        Intent intent1 = new Intent(this,InputBeritaActivity.class);
+//        startActivity(intent1);
+//        finish();
+//    }
 }
