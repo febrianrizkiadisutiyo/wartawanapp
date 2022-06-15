@@ -68,6 +68,7 @@ public class InputBeritaActivity extends AppCompatActivity {
             public void onClick(View view) {
                 publish();
                 Toast.makeText(InputBeritaActivity.this, "this ", Toast.LENGTH_SHORT).show();
+
             }
         });
 //        btntest = findViewById(R.id.btntest);
@@ -83,9 +84,6 @@ public class InputBeritaActivity extends AppCompatActivity {
         btndraft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(InputBeritaActivity.this,TampilanBerita.class);
-                startActivity(intent);
-                finish();
             }
         });
 
@@ -165,7 +163,7 @@ public class InputBeritaActivity extends AppCompatActivity {
                         Toast.makeText(InputBeritaActivity.this, "Success, "+ message, Toast.LENGTH_SHORT).show();
 
                          //Mengirim user ke activity login
-                        Intent intent = new Intent(InputBeritaActivity.this, LoginActivity.class);
+                        Intent intent = new Intent(InputBeritaActivity.this, TampilanBerita.class);
                         startActivity(intent);
                         finish();
                     } else {

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.wartawanapp.R;
 import com.example.wartawanapp.activity.Adapter.AdapterData;
 import com.example.wartawanapp.api.ApiClient;
@@ -45,7 +46,6 @@ public class TampilanBerita extends AppCompatActivity {
             public void onResponse(Call<TampilanData> call, Response<TampilanData> response) {
                 int kode = response.body().getKode();
                 String pesan = response.body().getPesan();
-
                 Toast.makeText(TampilanBerita.this, "Kode :"+kode+" | pesan :"+pesan, Toast.LENGTH_SHORT).show();
                 ListData = response.body().getData();
                 adData = new AdapterData(TampilanBerita.this, ListData);

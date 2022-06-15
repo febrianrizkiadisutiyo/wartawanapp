@@ -19,7 +19,7 @@
             android:id="@+id/ivgambarberita"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@color/black" />
+            android:background="@drawable/logo" />
 
         <TextView
             android:id="@+id/tvjudul"
@@ -28,24 +28,30 @@
             android:layout_marginStart="20dp"
             android:layout_toRightOf="@+id/ivgambarberita"
             android:text="Judul"
+            android:textColor="@color/black"
+
             android:textSize="20dp" />
+
         <TextView
-            android:layout_toRightOf="@+id/ivgambarberita"
-            android:layout_marginStart="20dp"
-            android:text="tags"
             android:id="@+id/tvtags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/tvjudul"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:layout_toRightOf="@+id/ivgambarberita"
             android:layout_marginStart="20dp"
-            android:text="Deskripsi"
+            android:layout_toRightOf="@+id/ivgambarberita"
+            android:textColor="@color/black"
+            android:text="tags" />
+
+        <TextView
             android:id="@+id/tvdeskripsi"
-            android:layout_marginTop="20dp"
-            android:layout_below="@+id/tvtags"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvtags"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/ivgambarberita"
+            android:text="Deskripsi"
+            android:textColor="@color/black"/>
 
     </RelativeLayout>
 

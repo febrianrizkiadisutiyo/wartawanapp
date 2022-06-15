@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 public class DataBerita {
 
 	@SerializedName("photo")
-	private String photo;
+	public static String photo;
 
 	@SerializedName("tanggal")
 	private String tanggal;
@@ -26,7 +26,7 @@ public class DataBerita {
 		this.photo = photo;
 	}
 
-	public String getPhoto(){
+	public static String getPhoto(){
 		return photo;
 	}
 

@@ -16,7 +16,7 @@
 
         <activity android:name=".activity.RegisterActivity" />
         <activity
-            android:name=".activity.TampilanBerita"
+            android:name=".activity.SplashActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,6 +31,9 @@
         <activity android:name=".activity.ProfilActivity" >
         </activity>
         <activity android:name=".activity.InputBeritaActivity" />
+        <activity android:name=".activity.TampilanBerita">
+
+        </activity>
     </application>
 
 </manifest>

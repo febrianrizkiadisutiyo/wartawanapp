@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.wartawanapp.R;
 import com.example.wartawanapp.activity.TampilanBerita;
 import com.example.wartawanapp.model.tampilanberita.DataBerita;
@@ -39,11 +40,12 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
     @Override
     public void onBindViewHolder(@NonNull HolderData holder, int position) {
         DataBerita db = ListBerita.get(position);
-
+        Glide.with(ctx).load(DataBerita.getPhoto()).into(holder.ivgambarberita);
         holder.idberita.setText(db.getIdBerita());
         holder.tvjudul.setText(db.getJudul());
         holder.tvtags.setText(db.getTags());
         holder.tvdeskripsi.setText(db.getDeskripsi());
+
 
     }
 
