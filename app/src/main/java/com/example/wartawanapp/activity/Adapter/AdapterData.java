@@ -17,14 +17,14 @@ import com.example.wartawanapp.model.tampilanberita.DataBerita;
 
 import java.util.List;
 
-public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
-    private Context ctx;
-    private List<DataBerita> ListBerita;
+public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
+    private final Context ctx;
+    private final List<DataBerita> ListBerita;
 
-//    public AdapterData(TampilanBerita tampilanBerita, List<DataBerita> listBerita) {
+    //    public AdapterData(TampilanBerita tampilanBerita, List<DataBerita> listBerita) {
 //        this.ctx = tampilanBerita;
 //    }
-    public AdapterData(Context context, List<DataBerita> listBerita){
+    public AdapterData(Context context, List<DataBerita> listBerita) {
         this.ctx = context;
         this.ListBerita = listBerita;
     }
@@ -32,7 +32,7 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
     @NonNull
     @Override
     public HolderData onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View layout = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_item,parent,false);
+        View layout = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_item, parent, false);
         HolderData holder = new HolderData(layout);
         return holder;
     }
@@ -54,7 +54,7 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
         return ListBerita.size();
     }
 
-    public  class HolderData extends RecyclerView.ViewHolder {
+    public static class HolderData extends RecyclerView.ViewHolder {
 
         TextView idberita, tvjudul, tvtags, tvdeskripsi;
         ImageView ivgambarberita;
@@ -69,5 +69,4 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
             ivgambarberita = itemView.findViewById(R.id.ivgambarberita);
         }
     }
-
 }

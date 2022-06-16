@@ -1,5 +1,6 @@
 package com.example.wartawanapp.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -25,28 +26,29 @@ import retrofit2.Response;
 public class TampilanBerita extends AppCompatActivity {
     private RecyclerView rvData;
     private RecyclerView.Adapter adData;
-    private RecyclerView.LayoutManager lmData;
     private List<DataBerita> ListData = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tampilan_berita);
 
         rvData = findViewById(R.id.rv_list);
-        lmData = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
+        RecyclerView.LayoutManager lmData = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvData.setLayoutManager(lmData);
         retrieveData();
     }
-    public  void retrieveData(){
+
+    public void retrieveData() {
         ApiInterface ardData = ApiClient.getClient().create(ApiInterface.class);
         Call<TampilanData> tampilData = ardData.TampilanResponse();
 
         tampilData.enqueue(new Callback<TampilanData>() {
             @Override
-            public void onResponse(Call<TampilanData> call, Response<TampilanData> response) {
+            public void onResponse(@NonNull Call<TampilanData> call, @NonNull Response<TampilanData> response) {
                 int kode = response.body().getKode();
                 String pesan = response.body().getPesan();
-                Toast.makeText(TampilanBerita.this, "Kode :"+kode+" | pesan :"+pesan, Toast.LENGTH_SHORT).show();
+                Toast.makeText(TampilanBerita.this, "Kode :" + kode + " | pesan :" + pesan, Toast.LENGTH_SHORT).show();
                 ListData = response.body().getData();
                 adData = new AdapterData(TampilanBerita.this, ListData);
                 rvData.setAdapter(adData);
@@ -54,7 +56,7 @@ public class TampilanBerita extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<TampilanData> call, Throwable t) {
+            public void onFailure(@NonNull Call<TampilanData> call, @NonNull Throwable t) {
                 Toast.makeText(TampilanBerita.this, "gagal terhubung", Toast.LENGTH_SHORT).show();
             }
         });

@@ -7,10 +7,10 @@
     tools:context=".activity.MainActivity">
 
     <RelativeLayout
-        android:layout_marginTop="30dp"
-        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
 
         <TextView
             android:id="@+id/logout"
@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
             android:layout_marginTop="20dp"
-            android:drawableEnd="@drawable/ic_logout" />
+            app:drawableEndCompat="@drawable/ic_logout" />
 
         <TextView
             android:id="@+id/etid"
@@ -45,8 +45,8 @@
             android:id="@+id/btnpindah"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:layout_below="@+id/etnama"
+            android:layout_marginTop="50dp"
             android:text="pindah" />
 
         <Button
@@ -57,7 +57,6 @@
             android:text="pindah ke upload image" />
 
     </RelativeLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

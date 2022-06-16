@@ -4,16 +4,16 @@
     android:layout_height="wrap_content">
 
     <RelativeLayout
-        android:padding="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="20dp">
 
         <TextView
             android:id="@+id/idberita"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Id Berita"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/ivgambarberita"
@@ -26,11 +26,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_toRightOf="@+id/ivgambarberita"
+            android:layout_toEndOf="@+id/ivgambarberita"
             android:text="Judul"
             android:textColor="@color/black"
 
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tvtags"
@@ -38,9 +38,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvjudul"
             android:layout_marginStart="20dp"
-            android:layout_toRightOf="@+id/ivgambarberita"
-            android:textColor="@color/black"
-            android:text="tags" />
+            android:layout_toEndOf="@+id/ivgambarberita"
+            android:text="tags"
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/tvdeskripsi"
@@ -49,9 +49,9 @@
             android:layout_below="@+id/tvtags"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:layout_toRightOf="@+id/ivgambarberita"
+            android:layout_toEndOf="@+id/ivgambarberita"
             android:text="Deskripsi"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
 
     </RelativeLayout>
 

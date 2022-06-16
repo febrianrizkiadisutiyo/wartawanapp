@@ -13,17 +13,17 @@ import com.example.wartawanapp.R;
 
 public class ProfilActivity extends AppCompatActivity {
 
-    EditText etnama, etid, etemail,etnohp,etjk;
-    String nama_lengkap, id_wartawan, email, no_hp,jenis_kelamin;
+    EditText etnama, etid, etemail, etnohp, etjk;
+    String nama_lengkap, id_wartawan, email, no_hp, jenis_kelamin;
     SessionManager sessionManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profil);
 
         sessionManager = new SessionManager(ProfilActivity.this);
-        if(!sessionManager.isLoggedIn()){
-        }
+        sessionManager.isLoggedIn();
 
         etnama = findViewById(R.id.etnama);
         etid = findViewById(R.id.etid);
@@ -46,5 +46,4 @@ public class ProfilActivity extends AppCompatActivity {
         jenis_kelamin = sessionManager.getUserDetail().get(SessionManager.jenis_kelamin);
         etjk.setText(jenis_kelamin);
     }
-
 }

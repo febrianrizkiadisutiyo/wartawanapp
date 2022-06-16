@@ -4,58 +4,58 @@ import com.google.gson.annotations.SerializedName;
 
 public class RegisterData {
 
-	@SerializedName("no_hp")
-	private String noHp;
+    @SerializedName("no_hp")
+    private String noHp;
 
-	@SerializedName("id_wartawan")
-	private String idWartawan;
+    @SerializedName("id_wartawan")
+    private String idWartawan;
 
-	@SerializedName("nama_lengkap")
-	private String namaLengkap;
+    @SerializedName("nama_lengkap")
+    private String namaLengkap;
 
-	@SerializedName("jenis_kelamin")
-	private String jenisKelamin;
+    @SerializedName("jenis_kelamin")
+    private String jenisKelamin;
 
-	@SerializedName("email")
-	private String email;
+    @SerializedName("email")
+    private String email;
 
-	public void setNoHp(String noHp){
-		this.noHp = noHp;
-	}
+    public void setNoHp(String noHp) {
+        this.noHp = noHp;
+    }
 
-	public String getNoHp(){
-		return noHp;
-	}
+    public String getNoHp() {
+        return noHp;
+    }
 
-	public void setIdWartawan(String idWartawan){
-		this.idWartawan = idWartawan;
-	}
+    public void setIdWartawan(String idWartawan) {
+        this.idWartawan = idWartawan;
+    }
 
-	public String getIdWartawan(){
-		return idWartawan;
-	}
+    public String getIdWartawan() {
+        return idWartawan;
+    }
 
-	public void setNamaLengkap(String namaLengkap){
-		this.namaLengkap = namaLengkap;
-	}
+    public void setNamaLengkap(String namaLengkap) {
+        this.namaLengkap = namaLengkap;
+    }
 
-	public String getNamaLengkap(){
-		return namaLengkap;
-	}
+    public String getNamaLengkap() {
+        return namaLengkap;
+    }
 
-	public void setJenisKelamin(String jenisKelamin){
-		this.jenisKelamin = jenisKelamin;
-	}
+    public void setJenisKelamin(String jenisKelamin) {
+        this.jenisKelamin = jenisKelamin;
+    }
 
-	public String getJenisKelamin(){
-		return jenisKelamin;
-	}
+    public String getJenisKelamin() {
+        return jenisKelamin;
+    }
 
-	public void setEmail(String email){
-		this.email = email;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-	public String getEmail(){
-		return email;
-	}
+    public String getEmail() {
+        return email;
+    }
 }

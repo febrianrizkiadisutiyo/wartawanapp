@@ -8,6 +8,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.wartawanapp.R;
@@ -40,20 +41,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btnlogin = findViewById(R.id.btnlogin);
         btnlogin.setOnClickListener(this);
 
-        tvregister= findViewById(R.id.tvregister);
+        tvregister = findViewById(R.id.tvregister);
         tvregister.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.btnlogin:
                 idWartawan = etid.getText().toString();
                 Password = etpassword.getText().toString();
-                login(idWartawan,Password);
+                login(idWartawan, Password);
                 break;
             case R.id.tvregister:
-                Intent intent = new Intent(this,RegisterActivity.class);
+                Intent intent = new Intent(this, RegisterActivity.class);
                 startActivity(intent);
                 break;
 
@@ -67,15 +68,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Call<Login> loginCall = apiInterface.LoginResponse(idWartawan, password);
         loginCall.enqueue(new Callback<Login>() {
             @Override
-            public void onResponse(Call<Login> call, Response<Login> response) {
-                if(response.body() != null && response.isSuccessful() && response.body().isStatus()){
+            public void onResponse(@NonNull Call<Login> call, @NonNull Response<Login> response) {
+                if (response.body() != null && response.isSuccessful() && response.body().isStatus()) {
 
                     sessionManager = new SessionManager(LoginActivity.this);
                     LoginData loginData = response.body().getData();
                     sessionManager.createLoginSession(loginData);
 
                     Toast.makeText(LoginActivity.this, response.body().getData().getNamaLengkap(), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
                 } else {
@@ -85,11 +86,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             }
 
             @Override
-            public void onFailure(Call<Login> call, Throwable t) {
+            public void onFailure(@NonNull Call<Login> call, @NonNull Throwable t) {
                 Toast.makeText(LoginActivity.this, t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-
-
     }
 }

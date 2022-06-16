@@ -7,6 +7,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.wartawanapp.R;
@@ -20,9 +21,9 @@ import retrofit2.Response;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
-    EditText etid,etpassword,etnama,etemail,etnohp,etjkelamin;
+    EditText etid, etpassword, etnama, etemail, etnohp, etjkelamin;
     ImageButton btnregister;
-    String idWartawan,Password,Nama,Email,noHp,jenisKelamin;
+    String idWartawan, Password, Nama, Email, noHp, jenisKelamin;
     ApiInterface apiInterface;
 
 
@@ -44,15 +45,14 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.btnregister:
-                idWartawan = etid.getText().toString();
-                Password = etpassword.getText().toString();
-                Nama = etnama.getText().toString();
-                Email = etemail.getText().toString();
-                noHp = etnohp.getText().toString();
-                jenisKelamin = etjkelamin.getText().toString();
-                register(idWartawan,Password,Nama,Email,noHp,jenisKelamin);
+        if (view.getId() == R.id.btnregister) {
+            idWartawan = etid.getText().toString();
+            Password = etpassword.getText().toString();
+            Nama = etnama.getText().toString();
+            Email = etemail.getText().toString();
+            noHp = etnohp.getText().toString();
+            jenisKelamin = etjkelamin.getText().toString();
+            register(idWartawan, Password, Nama, Email, noHp, jenisKelamin);
         }
     }
 
@@ -62,10 +62,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         Call<Register> call = apiInterface.RegisterResponse(idWartawan, password, nama, email, noHp, jenisKelamin);
         call.enqueue(new Callback<Register>() {
             @Override
-            public void onResponse(Call<Register> call, Response<Register> response) {
-                if(response.body() != null && response.isSuccessful() && response.body().isStatus()){
+            public void onResponse(@NonNull Call<Register> call, @NonNull Response<Register> response) {
+                if (response.body() != null && response.isSuccessful() && response.body().isStatus()) {
                     Toast.makeText(RegisterActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
+                    Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                     startActivity(intent);
                     finish();
                 } else {
@@ -74,10 +74,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             }
 
             @Override
-            public void onFailure(Call<Register> call, Throwable t) {
+            public void onFailure(@NonNull Call<Register> call, @NonNull Throwable t) {
                 Toast.makeText(RegisterActivity.this, t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 }

@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -42,12 +43,13 @@ import retrofit2.http.Multipart;
 public class InputBeritaActivity extends AppCompatActivity {
 
     ImageView image;
-    EditText etjudul, ettanggal, ettkp,ettags, etdeskripsi;
+    EditText etjudul, ettanggal, ettkp, ettags, etdeskripsi;
     ImageButton btnpublish, btndraft;
     TextView logout;
     String path;
 
     ApiInterface apiInterface;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,24 +83,21 @@ public class InputBeritaActivity extends AppCompatActivity {
 ////                startActivity(intent);
 //            }
 //        });
-        btndraft.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            }
+        btndraft.setOnClickListener(view -> {
         });
 
         logout = findViewById(R.id.logout);
 
-        image.setOnClickListener(v->{
-            if(ContextCompat.checkSelfPermission(getApplicationContext(),
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED){
+        image.setOnClickListener(v -> {
+            if (ContextCompat.checkSelfPermission(getApplicationContext(),
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 startActivityForResult(intent, 10);
             } else {
                 ActivityCompat.requestPermissions(InputBeritaActivity.this,
-                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},1);
+                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
             }
         });
 
@@ -114,7 +113,7 @@ public class InputBeritaActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == 10 && resultCode == Activity.RESULT_OK){
+        if (requestCode == 10 && resultCode == Activity.RESULT_OK) {
             Uri uri = data.getData();
             Context context = InputBeritaActivity.this;
             path = RealPathUtil.getRealPath(context, uri);
@@ -131,14 +130,14 @@ public class InputBeritaActivity extends AppCompatActivity {
         tags = ettags.getText().toString();
         deskripsi = etdeskripsi.getText().toString();
 
-        if (path == null){
+        if (path == null) {
             Toast.makeText(this, "Mohon upload image", Toast.LENGTH_SHORT).show();
             return;
         }
 
         File file = new File(path);
         RequestBody requetFile = RequestBody.create(MediaType.parse("multipart/form-data"), file);
-        MultipartBody.Part bodyimg = MultipartBody.Part.createFormData("gambar",file.getName(),requetFile);
+        MultipartBody.Part bodyimg = MultipartBody.Part.createFormData("gambar", file.getName(), requetFile);
         RequestBody requestjudul = RequestBody.create(MediaType.parse("multipart/form-data"), judul);
         RequestBody requesttanggal = RequestBody.create(MediaType.parse("multipart/form-data"), tanggal);
         RequestBody requesttkp = RequestBody.create(MediaType.parse("multipart/form-data"), tkp);
@@ -154,20 +153,19 @@ public class InputBeritaActivity extends AppCompatActivity {
                 requestdeskripsi
         ).enqueue(new Callback<InputBerita>() {
             @Override
-            public void onResponse(Call<InputBerita> call, Response<InputBerita> response) {
-                if(response.isSuccessful()){
-                    if(response.body() != null);
-                        String status = response.body().getStatus();
-                        String message = response.body().getMessage();
-                    if (status.equals("success")){
-                        Toast.makeText(InputBeritaActivity.this, "Success, "+ message, Toast.LENGTH_SHORT).show();
+            public void onResponse(@NonNull Call<InputBerita> call, @NonNull Response<InputBerita> response) {
+                if (response.isSuccessful()) {
+                    String status = response.body().getStatus();
+                    String message = response.body().getMessage();
+                    if (status.equals("success")) {
+                        Toast.makeText(InputBeritaActivity.this, "Success, " + message, Toast.LENGTH_SHORT).show();
 
-                         //Mengirim user ke activity login
+                        //Mengirim user ke activity login
                         Intent intent = new Intent(InputBeritaActivity.this, TampilanBerita.class);
                         startActivity(intent);
                         finish();
                     } else {
-                        Toast.makeText(InputBeritaActivity.this, message , Toast.LENGTH_SHORT).show();
+                        Toast.makeText(InputBeritaActivity.this, message, Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     Toast.makeText(InputBeritaActivity.this, "Data null", Toast.LENGTH_SHORT).show();
@@ -175,17 +173,9 @@ public class InputBeritaActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<InputBerita> call, Throwable t) {
+            public void onFailure(@NonNull Call<InputBerita> call, @NonNull Throwable t) {
                 Toast.makeText(InputBeritaActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
-
             }
         });
-
     }
-
-
-
-
-
-
 }

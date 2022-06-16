@@ -21,9 +21,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //
 //    String id_wartawan, nama_lengkap;
 
-        TextView profil, logout;
-        ImageView ivadd;
-        SessionManager sessionManager;
+    TextView profil, logout;
+    ImageView ivadd;
+    SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.home);
 
         sessionManager = new SessionManager(MainActivity.this);
-        if(!sessionManager.isLoggedIn()) {
+        if (!sessionManager.isLoggedIn()) {
             moveToLogin();
         }
 
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void moveToLogin() {
-        Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(intent);
         finish();
@@ -71,21 +71,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.logout:
-                sessionManager.logoutSession();
-                moveToLogin();
+        if (view.getId() == R.id.logout) {
+            sessionManager.logoutSession();
+            moveToLogin();
         }
     }
 
     public void profil(View view) {
-        Intent intent = new Intent(this,ProfilActivity.class);
+        Intent intent = new Intent(this, ProfilActivity.class);
         startActivity(intent);
         finish();
     }
 
     public void inputberita(View view) {
-        Intent intent = new Intent(this,InputBeritaActivity.class);
+        Intent intent = new Intent(this, InputBeritaActivity.class);
         startActivity(intent);
         finish();
     }

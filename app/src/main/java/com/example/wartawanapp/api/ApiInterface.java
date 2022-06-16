@@ -34,19 +34,19 @@ public interface ApiInterface {
             @Field("no_hp") String no_hp,
             @Field("jenis_kelamin") String jenis_kelamin
     );
+
     @Multipart
     @POST("inputberita.php")
     Call<InputBerita> InputBeritaResponse(
             @Part MultipartBody.Part gambar,
-            @Part("judul")RequestBody judul,
-            @Part("tanggal")RequestBody tanggal,
-            @Part("tkp")RequestBody tkp,
-            @Part("tags")RequestBody tags,
-            @Part("deskripsi")RequestBody deskripsi
+            @Part("judul") RequestBody judul,
+            @Part("tanggal") RequestBody tanggal,
+            @Part("tkp") RequestBody tkp,
+            @Part("tags") RequestBody tags,
+            @Part("deskripsi") RequestBody deskripsi
 
     );
+
     @GET("retrieve.php")
     Call<TampilanData> TampilanResponse();
-
-
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,8 +16,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="19dp"
-            android:drawableStart="@drawable/ic_baseline_person_24"
             android:onClick="profil"
+            app:drawableStartCompat="@drawable/ic_baseline_person_24"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         <ImageView
@@ -31,7 +32,7 @@
             android:id="@+id/ivlogo"
             android:layout_width="100dp"
             android:layout_height="70dp"
-            android:layout_marginLeft="250dp"
+            android:layout_marginStart="250dp"
             android:layout_marginTop="60dp"
             android:src="@drawable/logo" />
 
@@ -40,15 +41,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_toRightOf="@+id/ivlogo"
-            android:drawableEnd="@drawable/ic_baseline_logout_24" />
+            android:layout_toEndOf="@+id/ivlogo"
+            app:drawableEndCompat="@drawable/ic_baseline_logout_24" />
 
         <ImageView
             android:id="@+id/ivberita"
             android:layout_width="400dp"
             android:layout_height="400dp"
             android:layout_below="@id/ivtoday"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="-24dp"
             android:src="@drawable/gambar" />
 
@@ -57,7 +58,7 @@
             android:layout_width="70dp"
             android:layout_height="20dp"
             android:layout_below="@id/ivberita"
-            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="20dp"
             android:src="@drawable/tranding" />
 
@@ -66,7 +67,7 @@
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:layout_below="@id/ivtranding"
-            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:src="@drawable/berita1" />
 
         <ImageView
@@ -74,7 +75,7 @@
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:layout_below="@id/ivberita1"
-            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:src="@drawable/berita2" />
 
         <ImageView
@@ -82,7 +83,7 @@
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:layout_below="@id/ivberita2"
-            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:src="@drawable/berita3" />
 
         <ImageView
@@ -90,7 +91,7 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_below="@id/ivberita2"
-            android:layout_marginLeft="350dp"
+            android:layout_marginStart="350dp"
             android:layout_marginTop="40dp"
             android:onClick="inputberita"
             android:src="@drawable/tambah" />
