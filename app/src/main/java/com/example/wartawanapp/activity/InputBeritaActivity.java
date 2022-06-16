@@ -62,7 +62,7 @@ public class InputBeritaActivity extends AppCompatActivity {
         ettkp = findViewById(R.id.ettkp);
         ettags = findViewById(R.id.ettags);
         etdeskripsi = findViewById(R.id.etdeskripsi);
-        btnpublish = findViewById(R.id.btnpublish);
+        btnpublish = findViewById(R.id.btntombol);
         btndraft = findViewById(R.id.btndraft);
 
         btnpublish.setOnClickListener(new View.OnClickListener() {

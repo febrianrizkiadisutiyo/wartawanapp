@@ -25,7 +25,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="20dp"
             android:text="Judul"
-            android:textSize="20sp"
+            android:textSize="18dp"
             android:textStyle="bold" />
 
         <EditText
@@ -34,8 +34,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvjudul"
             android:background="@drawable/custom"
+            android:hint="Input Judul"
             android:inputType="text"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:paddingHorizontal="20dp" />
 
         <TextView
             android:id="@+id/tvtanggal"
@@ -45,7 +47,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="15dp"
             android:text="Tanggal"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <EditText
@@ -54,7 +56,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvtanggal"
             android:background="@drawable/custom"
+            android:hint="Tanggal Kejadian"
             android:inputType="text"
+            android:paddingHorizontal="20dp"
             android:minHeight="48dp" />
 
         <TextView
@@ -65,7 +69,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="15dp"
             android:text="Tempat Kejadian"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <EditText
@@ -75,7 +79,9 @@
             android:layout_below="@+id/tvtkp"
             android:background="@drawable/custom"
             android:inputType="text"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:hint="Tempat Kejadian Perkara"
+            android:paddingHorizontal="20dp"/>
 
         <TextView
             android:id="@+id/tvtags"
@@ -85,7 +91,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="15dp"
             android:text="Tags"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <EditText
@@ -95,7 +101,9 @@
             android:layout_below="@+id/tvtags"
             android:background="@drawable/custom"
             android:inputType="text"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:hint="Tambahkan Tag"
+            android:paddingHorizontal="20dp"/>
 
         <TextView
             android:id="@+id/tvdescription"
@@ -105,7 +113,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="15dp"
             android:text="Description"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <EditText
@@ -113,18 +121,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvdescription"
+            android:layout_marginTop="0dp"
             android:background="@drawable/custom"
             android:drawablePadding="24dp"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:hint="Isi Berita"
+            android:paddingHorizontal="20dp"/>
 
         <ImageButton
-            android:id="@+id/btnpublish"
+            android:id="@+id/btntombol"
             android:layout_width="100dp"
             android:layout_height="35dp"
             android:layout_below="@+id/etdeskripsi"
             android:layout_marginStart="250dp"
             android:layout_marginTop="30dp"
-            android:background="@drawable/btnpublish"
+            android:background="@drawable/publikk"
             android:onClick="login" />
 
         <ImageButton
@@ -134,7 +145,7 @@
             android:layout_below="@+id/etdeskripsi"
             android:layout_marginStart="120dp"
             android:layout_marginTop="30dp"
-            android:background="@drawable/btndraft"
+            android:background="@drawable/draft"
             android:onClick="login" />
     </RelativeLayout>
 </ScrollView>

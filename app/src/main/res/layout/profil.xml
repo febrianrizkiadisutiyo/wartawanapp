@@ -4,11 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    android:padding="15dp">
+    android:padding="20dp">
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="115dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/logo" />
@@ -17,18 +18,16 @@
         android:id="@+id/tvname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="205dp"
         android:text="Nama"
-        android:textSize="23sp"
-        android:textStyle="bold" />
+        android:textSize="20dp" />
 
     <EditText
         android:id="@+id/etnama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/tvjkelamin"
         android:background="@drawable/custom"
         android:minHeight="48dp"
@@ -39,11 +38,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvname"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="37dp"
         android:text="Id Wartawan"
-        android:textSize="23sp"
-        android:textStyle="bold" />
+        android:textSize="20dp" />
 
     <EditText
         android:id="@+id/etid"
@@ -51,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/etnama"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/tvjkelamin"
         android:background="@drawable/custom"
         android:minHeight="48dp"
@@ -62,11 +59,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvid"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="37dp"
         android:text="Email"
-        android:textSize="23sp"
-        android:textStyle="bold" />
+        android:textSize="20dp" />
 
     <EditText
         android:id="@+id/etemail"
@@ -74,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/etid"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/tvjkelamin"
         android:background="@drawable/custom"
         android:minHeight="48dp"
@@ -85,11 +80,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvemail"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="35dp"
+
+        android:layout_marginTop="37dp"
         android:text="No Hp"
-        android:textSize="23sp"
-        android:textStyle="bold" />
+        android:textSize="20dp" />
 
     <EditText
         android:id="@+id/etnohp"
@@ -97,7 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/etemail"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/tvjkelamin"
         android:background="@drawable/custom"
         android:minHeight="48dp"
@@ -108,22 +102,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvnohp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="37dp"
         android:text="Jenis Kelamin"
-        android:textSize="23sp"
-        android:textStyle="bold" />
+        android:textSize="20dp" />
 
     <EditText
         android:id="@+id/etjk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/etnohp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="20dp"
         android:layout_toEndOf="@+id/tvjkelamin"
         android:background="@drawable/custom"
         android:minHeight="48dp"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvnoted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvjkelamin"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="37dp"
+        android:text="This Account is FRIMD member if there’s any compalaint
+you can "
+        android:textSize="10dp" />
+
+    <TextView
+        android:id="@+id/tvlink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvjkelamin"
+        android:layout_marginStart="302dp"
+        android:layout_marginTop="37dp"
+        android:text="Contact Us."
+        android:textColor="#03A9F4"
+        android:textSize="10dp" />
 
 </RelativeLayout>

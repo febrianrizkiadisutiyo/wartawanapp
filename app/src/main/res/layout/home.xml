@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     android:background="@drawable/background">
 
     <RelativeLayout
@@ -11,7 +12,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/profil"
+            android:id="@+id/tvprofil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -24,7 +25,7 @@
             android:id="@+id/ivtoday"
             android:layout_width="200dp"
             android:layout_height="50dp"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="70dp"
             android:src="@drawable/today" />
 
@@ -32,7 +33,7 @@
             android:id="@+id/ivlogo"
             android:layout_width="100dp"
             android:layout_height="70dp"
-            android:layout_marginStart="250dp"
+            android:layout_marginStart="280dp"
             android:layout_marginTop="60dp"
             android:src="@drawable/logo" />
 
@@ -40,13 +41,14 @@
             android:id="@+id/logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_toEndOf="@+id/ivlogo"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="19dp"
+            android:layout_toEndOf="@+id/tvprofil"
             app:drawableEndCompat="@drawable/ic_baseline_logout_24" />
 
         <ImageView
             android:id="@+id/ivberita"
-            android:layout_width="400dp"
+            android:layout_width="600dp"
             android:layout_height="400dp"
             android:layout_below="@id/ivtoday"
             android:layout_marginStart="5dp"
@@ -59,7 +61,6 @@
             android:layout_height="20dp"
             android:layout_below="@id/ivberita"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="20dp"
             android:src="@drawable/tranding" />
 
         <ImageView
@@ -75,7 +76,7 @@
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:layout_below="@id/ivberita1"
-            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/berita2" />
 
         <ImageView

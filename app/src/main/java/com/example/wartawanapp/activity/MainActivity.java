@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             moveToLogin();
         }
 
-        profil = findViewById(R.id.profil);
+        profil = findViewById(R.id.tvprofil);
         logout = findViewById(R.id.logout);
         ivadd = findViewById(R.id.ivadd);
 

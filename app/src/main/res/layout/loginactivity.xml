@@ -3,19 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
+    android:padding="50dp"
+    android:layout_centerHorizontal="true">
 
-    android:padding="50dp">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="152dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo" />
 
     <EditText
         android:id="@+id/etid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="300dp"
+        android:background="@drawable/custom"
         android:drawableStart="@drawable/ic_person"
         android:drawablePadding="24dp"
         android:hint="Id Wartawan"
         android:inputType="number"
-        android:minHeight="48dp" />
+        android:padding="13dp" />
 
     <EditText
         android:id="@+id/etpassword"
@@ -23,10 +31,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/etid"
         android:layout_marginTop="25dp"
+        android:background="@drawable/custom"
         android:drawableStart="@drawable/ic_password"
         android:drawablePadding="24dp"
         android:hint="Password"
         android:inputType="textPassword"
+        android:padding="13dp"
         tools:ignore="TouchTargetSizeCheck" />
 
     <ImageButton
